@@ -1,0 +1,10 @@
+node_modules
+.turbo
+.env*
+!.env.example
+*.spec.ts
+*.test.ts
+e2e
+coverage
+logs
+test/
