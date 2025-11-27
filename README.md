@@ -59,6 +59,163 @@ $ pnpm run test:cov
 
 ## Deployment
 
+### Vercel Deployment
+
+This NestJS application is configured for serverless deployment on Vercel. Follow these steps to deploy:
+
+#### Prerequisites
+- A Vercel account ([sign up here](https://vercel.com/signup))
+- Vercel CLI installed: `npm i -g vercel`
+- A PostgreSQL database (e.g., [Neon](https://neon.tech), [Supabase](https://supabase.com), or [Railway](https://railway.app))
+
+#### Environment Variables
+
+Before deploying, configure these environment variables in your Vercel project settings:
+
+**Required Variables:**
+```bash
+# Application
+APP_NAME=your-app-name
+PORT=3000
+API_VERSION=1.0
+NODE_ENV=production
+
+# Database (PostgreSQL)
+DATABASE_URL=postgresql://user:password@host:5432/database?schema=public
+DIRECT_URL=postgresql://user:password@host:5432/database?schema=public
+
+# API Security
+APP_KEY=your-secure-api-key
+SWAGGER_ROUTE=/api-docs
+SWAGGER_PASSWORD=your-swagger-password
+
+# Rate Limiting
+RATE_LIMIT_POINTS=100
+RATE_LIMIT_DURATION=3600
+RATE_LIMIT_BLOCK_DURATION=300
+
+# Authentication
+ACCESS_TOKEN_VALIDATION_URL=https://your-auth-service.com/api/auth/get-session
+AUTHORIZER_API_KEY=your-authorizer-key
+CLUSTER_CLIENT_ID=your-client-id
+
+# CORS
+CORS_ORIGIN=*
+
+# YouTube Integration (if using)
+CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+PROJECT_ID=your-project-id
+AUTH_URI=https://accounts.google.com/o/oauth2/auth
+TOKEN_URI=https://oauth2.googleapis.com/token
+AUTH_PROVIDER_X509_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
+CLIENT_SECRET=your-client-secret
+REDIRECT_URI=https://your-domain.vercel.app/api/auth/yt/callback
+
+# AWS S3 (if using)
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=your-access-key
+AWS_SECRET_ACCESS_KEY=your-secret-key
+AWS_S3_BUCKET_NAME=your-bucket-name
+AWS_S3_ENDPOINT=https://s3.amazonaws.com
+AWS_S3_FOLDER_NAME=media
+
+# Google Cloud Platform (if using)
+GCP_PROJECT_ID=your-gcp-project-id
+GCP_PRIVATE_KEY_ID=your-private-key-id
+GCP_CLIENT_EMAIL=your-service-account@your-project.iam.gserviceaccount.com
+GCP_CLIENT_ID=your-gcp-client-id
+GCP_PRIVATE_KEY_B64=base64-encoded-private-key
+GCP_BUCKET_LOCATION=asia-south1
+
+# Google Drive (if using)
+GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=https://your-domain.vercel.app/v1.0/drive/oauth-callback
+GOOGLE_REFRESH_TOKEN=your-refresh-token
+DRIVE_ROOT_FOLDER_NAME=spectral
+```
+
+#### Deployment Steps
+
+1. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
+
+2. **Build locally to verify (optional):**
+   ```bash
+   pnpm run build
+   ```
+
+3. **Deploy to Vercel:**
+   ```bash
+   vercel
+   ```
+
+4. **For production deployment:**
+   ```bash
+   vercel --prod
+   ```
+
+#### Post-Deployment
+
+1. **Database Migrations:**
+   After deployment, you may need to run Prisma migrations manually:
+   ```bash
+   # Set your DATABASE_URL environment variable locally
+   export DATABASE_URL="your-database-url"
+   
+   # Run migrations
+   pnpm run prisma:migrate
+   ```
+
+2. **Verify Deployment:**
+   - Check your deployment URL
+   - Access the Swagger documentation at `https://your-domain.vercel.app/api-docs`
+   - Test health endpoint: `https://your-domain.vercel.app/health`
+
+#### Important Notes
+
+- The application uses serverless functions on Vercel, with cold start times on first request
+- Prisma Client is generated during the build process via the `postinstall` script
+- Logs are available in the Vercel dashboard
+- For file uploads, ensure you configure appropriate cloud storage (AWS S3, GCP, or Google Drive)
+- Database connections are pooled; ensure your PostgreSQL provider supports connection pooling
+
+#### Troubleshooting
+
+**Build Failures:**
+- Ensure all required environment variables are set in Vercel
+- Check build logs in Vercel dashboard
+- Verify Prisma schema is valid: `pnpm run prisma:generate`
+
+**Runtime Errors:**
+- Check function logs in Vercel dashboard
+- Verify database connectivity
+- Ensure all environment variables are properly set
+
+**API Not Responding:**
+- Cold starts may take a few seconds
+- Check rate limiting configuration
+- Verify API key authentication
+
+### Local Development
+
+For local development, create a `.env.local` file based on `.env.example`:
+
+```bash
+cp .env.example .env.local
+```
+
+Then run:
+```bash
+pnpm install
+pnpm run prisma:generate
+pnpm run dev
+```
+
+### Other Deployment Options
+
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
 
 If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:

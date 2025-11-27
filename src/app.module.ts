@@ -167,7 +167,7 @@ import { DriveModule } from './modules/media/libs/drive/drive.module';
       winston: {
         console: true,
         file: {
-          enabled: true,
+          enabled: false,
         },
       },
     }),
