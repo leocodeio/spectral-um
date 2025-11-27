@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd ../.. && pnpm turbo build --filter=@spectral/api...",
-  "installCommand": "cd ../.. && pnpm install --shamefully-hoist",
+  "version": 2,
+  "buildCommand": "pnpm install && pnpm run build && pnpm run prisma:generate",
   "builds": [
     {
       "src": "api/index.ts",
@@ -12,5 +12,8 @@
       "src": "/(.*)",
       "dest": "api/index.ts"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

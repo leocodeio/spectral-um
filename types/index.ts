@@ -1,6 +1,6 @@
-import { $Enums } from "../db/src";
+import { $Enums } from "../src/db/src";
 // User entity types
-import { User } from "../db/src";
+import { User } from "../src/db/src";
 export type xUser = User;
 
 // User domain types
@@ -22,7 +22,7 @@ export type xDomainUser = {
 export type xYtCreatorStatusType = $Enums.YtCreatorStatus;
 
 // YtCreator entity types
-import { YtCreator } from "../db/src";
+import { YtCreator } from "../src/db/src";
 export type xYtCreator = YtCreator;
 
 // YtCreator domain types
@@ -39,7 +39,7 @@ export type xDomainYtCreator = {
 export type xCreatorEditorMapStatusType = $Enums.CreatorEditorMapStatus;
 
 // CreatorEditorMap entity types
-import { CreatorEditorMap } from "../db/src";
+import { CreatorEditorMap } from "../src/db/src";
 export type xCreatorEditorMap = CreatorEditorMap;
 
 // CreatorEditorMap domain types
@@ -58,7 +58,7 @@ export type xDomainCreatorEditorMap = {
 export type xAccountEditorMapStatusType = $Enums.AccountEditorMapStatus;
 
 // AccountEditorMap entity types
-import { AccountEditorMap } from "../db/src";
+import { AccountEditorMap } from "../src/db/src";
 export type xAccountEditorMap = AccountEditorMap;
 
 // AccountEditorMap domain types
@@ -72,7 +72,7 @@ export type xDomainAccountEditorMap = {
 };
 
 // Folder entity types
-import { Folder } from "../db/src";
+import { Folder } from "../src/db/src";
 export type xFolder = Folder;
 
 // Folder domain types
@@ -86,7 +86,7 @@ export type xDomainFolders = {
 };
 
 // FolderItems entity types
-import { FolderItem } from "../db/src";
+import { FolderItem } from "../src/db/src";
 export type xFolderItem = FolderItem;
 
 // FolderItems domain types
@@ -103,7 +103,7 @@ export type xDomainFolderItem = {
 export type xMediaType = $Enums.MediaType;
 
 // Media entity types
-import { Media } from "../db/src";
+import { Media } from "../src/db/src";
 export type xMedia = Media;
 
 // Media domain types
@@ -120,7 +120,7 @@ export type xDomainMedia = {
 export type xContributeStatusType = $Enums.ContributeStatus;
 
 // Contribute entity types
-import { Contribute } from "../db/src";
+import { Contribute } from "../src/db/src";
 export type xContribute = Contribute;
 
 // Contribute domain types
@@ -148,7 +148,7 @@ export type xDomainContribute = {
 export type xContributionVersionStatusType = $Enums.ContributionVersionStatus;
 
 // ContributionVersion entity types
-import { ContributionVersion } from "../db/src";
+import { ContributionVersion } from "../src/db/src";
 export type xContributionVersion = ContributionVersion;
 
 // ContributionVersion domain types
@@ -174,7 +174,7 @@ export type xDomainContributionVersion = {
 // VersionComment
 
 // VersionComment entity types
-import { VersionComment } from "../db/src";
+import { VersionComment } from "../src/db/src";
 export type xVersionComment = VersionComment;
 
 // VersionComment domain types

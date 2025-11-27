@@ -13,7 +13,7 @@ import { IAccountEditorMapPort } from '../../domain/ports/account-editor-map.por
 import { xCreatorEditorMapStatusType } from '@spectral/types';
 import { CreatorEditorFindDto } from '../../application/dtos/find-creator-editor.dto';
 import { PrismaService } from '../../../../utilities/database/prisma.service';
-import { CreatorEditorMap, AccountEditorMap } from '@spectral/db';
+import { CreatorEditorMap, AccountEditorMap } from 'src/db/src';
 import { xAccountEditorMapStatusType } from '@spectral/types';
 
 @Injectable()
