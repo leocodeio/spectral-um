@@ -1,7 +1,6 @@
 {
   "version": 2,
   "buildCommand": "pnpm install && pnpm prisma generate --schema=./db/prisma/schema.prisma && pnpm run build",
-  "outputDirectory": "dist",
   "builds": [
     {
       "src": "dist/api/index.js",
@@ -11,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/api/index.js"
+      "dest": "/dist/api/index.js"
     }
   ],
   "env": {
