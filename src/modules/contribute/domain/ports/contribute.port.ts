@@ -3,7 +3,7 @@ import {
   xContributionVersionStatusType,
   xDomainContributionVersion,
   xDomainVersionComment,
-} from '@spectral/types';
+} from '../../../../../types';
 
 export interface CreateContributeData {
   accountId: string;

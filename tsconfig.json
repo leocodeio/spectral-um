@@ -16,10 +16,6 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false,
-    "paths": {
-      "@spectral/types": ["./types/index.ts"],
-      "@spectral/db": ["src/db/src/index.ts"]
-    }
+    "noFallthroughCasesInSwitch": false
   }
 }

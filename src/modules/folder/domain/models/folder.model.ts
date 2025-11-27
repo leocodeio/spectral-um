@@ -1,1 +1,1 @@
-export { xDomainFolders, xDomainFolderItem } from '@spectral/types';
+export { xDomainFolders, xDomainFolderItem } from '../../../../../types';

@@ -6,7 +6,7 @@ import { CreatorEditorMapService } from '../../application/services/map.service'
 // account editor
 import { AccountEditorMapService } from '../../application/services/map.service';
 import { ApiSecurity } from '@nestjs/swagger';
-import { xCreatorEditorMapStatusType } from '@spectral/types';
+import { xCreatorEditorMapStatusType } from '../../../../../types';
 import { Roles } from 'src/utilities/auth/decorator/role/role.decorator';
 import { Request } from 'express';
 

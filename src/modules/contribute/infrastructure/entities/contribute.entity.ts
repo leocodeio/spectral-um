@@ -1,1 +1,1 @@
-export { xContribute } from '@spectral/types';
+export { xContribute } from '../../../../../types';

@@ -10,11 +10,11 @@ import { ICreatorEditorMapPort } from '../../domain/ports/creator-editor-map.por
 // account editor
 import { xAccountEditorMap } from '../../infrastructure/entities/account-editor-map.entity';
 import { IAccountEditorMapPort } from '../../domain/ports/account-editor-map.port';
-import { xCreatorEditorMapStatusType } from '@spectral/types';
+import { xCreatorEditorMapStatusType } from '../../../../../types';
 import { CreatorEditorFindDto } from '../../application/dtos/find-creator-editor.dto';
 import { PrismaService } from '../../../../utilities/database/prisma.service';
 import { CreatorEditorMap, AccountEditorMap } from 'src/db/src';
-import { xAccountEditorMapStatusType } from '@spectral/types';
+import { xAccountEditorMapStatusType } from '../../../../../types';
 
 @Injectable()
 export class CreatorEditorMapRepositoryAdapter

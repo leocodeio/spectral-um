@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString } from 'class-validator';
-import { xAccountEditorMapStatusType } from '@spectral/types';
+import { xAccountEditorMapStatusType } from '../../../../../types';
 
 export class CreateAccountEditorMapDto {
   @ApiProperty({ description: 'Account ID', required: true })

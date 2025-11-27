@@ -32,7 +32,7 @@ import {
   CreateFolderDto,
 } from '../../application/dtos/create-folder.dto';
 import { xDomainFolders } from 'src/modules/folder/domain/models/folder.model';
-import { xDomainFolderItem } from '@spectral/types';
+import { xDomainFolderItem } from '../../../../../types';
 
 @ApiTags('folders')
 @ApiSecurity('x-api-key')

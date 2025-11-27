@@ -6,7 +6,7 @@ import { randomUUID } from 'node:crypto';
 import { PrismaService } from 'src/utilities/database/prisma.service';
 import { DriveService } from '../../../../libs/drive/application/services/drive.service';
 import { CreateMediaDto } from '../../application/dtos/create-media.dto';
-import { xMedia } from '@spectral/types';
+import { xMedia } from '../../../../../../../types';
 
 @Injectable()
 export class MediaRepositoryAdapter implements IMediaPort {

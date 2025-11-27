@@ -1,1 +1,1 @@
-export { xDomainMedia } from '@spectral/types';
+export { xDomainMedia } from '../../../../../../../types';

@@ -1,1 +1,1 @@
-export { xFolder } from '@spectral/types';
+export { xFolder } from '../../../../../types';

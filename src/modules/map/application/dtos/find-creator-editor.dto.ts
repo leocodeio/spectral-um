@@ -1,4 +1,4 @@
-import { xCreatorEditorMapStatusType } from '@spectral/types';
+import { xCreatorEditorMapStatusType } from '../../../../../types';
 
 export class CreatorEditorFindDto {
   creatorId: string;

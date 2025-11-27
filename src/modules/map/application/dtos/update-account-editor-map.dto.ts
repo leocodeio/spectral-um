@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsOptional } from 'class-validator';
-import { xAccountEditorMapStatusType } from '@spectral/types';
+import { xAccountEditorMapStatusType } from '../../../../../types';
 
 export class UpdateAccountEditorMapDto {
   @ApiProperty({

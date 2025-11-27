@@ -14,7 +14,7 @@ import {
   xDomainContribute,
   xDomainContributionVersion,
   xDomainVersionComment,
-} from '@spectral/types';
+} from '../../../../../types';
 import {
   CreateContributionDto,
   UpdateContributionStatusDto,
@@ -23,7 +23,7 @@ import {
   CreateVersionCommentDto,
 } from '../dtos';
 import { MediaService } from '../../../media/modules/media/application/services/media.service';
-import { xContributeStatusType } from '@spectral/types';
+import { xContributeStatusType } from '../../../../../types';
 import { YtAuthService } from 'src/modules/yt_int/modules/youtube/application/services/yt-auth.service';
 
 @Injectable()

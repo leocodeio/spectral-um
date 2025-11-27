@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsEnum } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { xContributionVersionStatusType } from '@spectral/types';
+import { xContributionVersionStatusType } from '../../../../../types';
 
 export class UpdateVersionStatusDto {
   @ApiProperty({

@@ -1,1 +1,1 @@
-export { xAccountEditorMapStatusType } from '@spectral/types';
+export { xAccountEditorMapStatusType } from '../../../../../types';

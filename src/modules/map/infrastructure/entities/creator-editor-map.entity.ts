@@ -1,1 +1,1 @@
-export { xCreatorEditorMap } from '@spectral/types';
+export { xCreatorEditorMap } from '../../../../../types';

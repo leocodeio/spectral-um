@@ -4,7 +4,7 @@
 // import { MediaService } from '../../application/services/media.service';
 // import { CreateMediaDto } from '../../application/dtos/create-media.dto';
 // import { UpdateMediaDto } from '../../application/dtos/update-media.dto';
-// import { xMediaType } from '@spectral/types';
+// import { xMediaType } from '../../../../../../../types';
 
 // describe('MediaController', () => {
 //   let controller: MediaController;

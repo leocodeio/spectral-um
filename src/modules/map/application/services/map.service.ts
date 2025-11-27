@@ -8,7 +8,7 @@ import { ICreatorEditorMapPort } from '../../domain/ports/creator-editor-map.por
 import { xAccountEditorMap } from '../../infrastructure/entities/account-editor-map.entity';
 import { IAccountEditorMapPort } from '../../domain/ports/account-editor-map.port';
 import { CreatorEditorFindDto } from '../dtos/find-creator-editor.dto';
-import { xAccountEditorMapStatusType } from '@spectral/types';
+import { xAccountEditorMapStatusType } from '../../../../../types';
 
 @Injectable()
 export class CreatorEditorMapService {

@@ -11,7 +11,7 @@ import { xDomainContribute } from '../../domain/models/contribute.model';
 import {
   xDomainContributionVersion,
   xDomainVersionComment,
-} from '@spectral/types';
+} from '../../../../../types';
 
 @Injectable()
 export class ContributeRepositoryAdapter implements IContributePort {

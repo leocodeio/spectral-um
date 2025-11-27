@@ -1,5 +1,5 @@
 import { xAccountEditorMap } from '../../infrastructure/entities/account-editor-map.entity';
-import { xAccountEditorMapStatusType } from '@spectral/types';
+import { xAccountEditorMapStatusType } from '../../../../../types';
 
 export abstract class IAccountEditorMapPort {
   abstract findByAccountId(accountId: string): Promise<xAccountEditorMap[]>;
