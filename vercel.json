@@ -1,7 +1,7 @@
 {
   "version": 2,
   "installCommand": "pnpm install",
-  "buildCommand": "npx prisma generate --schema=./src/db/prisma/schema.prisma && pnpm run build",
+  "buildCommand": "cd src/db && npx prisma generate && cd ../.. && pnpm run build",
   "functions": {
     "api/index.js": {
       "memory": 1024,
