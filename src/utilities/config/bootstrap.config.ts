@@ -2,7 +2,8 @@ import { INestApplication } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import helmet from 'helmet';
-import * as basicAuth from 'express-basic-auth';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const basicAuth = require('express-basic-auth');
 
 const configService = new ConfigService();
 export class BootstrapConfig {

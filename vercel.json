@@ -1,17 +1,18 @@
 {
   "version": 2,
-  "buildCommand": "npx prisma generate --schema=./src/db/prisma/schema.prisma && pnpm run build",
   "installCommand": "pnpm install",
-  "builds": [
-    {
-      "src": "dist/src/main.js",
-      "use": "@vercel/node"
+  "buildCommand": "npx prisma generate --schema=./src/db/prisma/schema.prisma && pnpm run build",
+  "functions": {
+    "api/index.js": {
+      "memory": 1024,
+      "maxDuration": 30,
+      "includeFiles": "dist/**"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/dist/src/main.js"
+      "source": "/(.*)",
+      "destination": "/api"
     }
   ]
 }

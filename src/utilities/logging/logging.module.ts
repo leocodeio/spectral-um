@@ -8,7 +8,7 @@ import {
 import { LoggerService } from './services/logger.service';
 import { WinstonModule } from 'nest-winston';
 import * as winston from 'winston';
-import * as DailyRotateFile from 'winston-daily-rotate-file';
+import DailyRotateFile from 'winston-daily-rotate-file';
 import { ConfigModule } from '@nestjs/config';
 import { DebugUtil } from './utils/debug.util';
 import { CorrelationService } from '../correlation/correlation.service';

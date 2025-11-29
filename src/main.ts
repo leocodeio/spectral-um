@@ -4,11 +4,11 @@ import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 import { BootstrapConfig } from './utilities/config/bootstrap.config';
 import { ExpressAdapter } from '@nestjs/platform-express';
-import * as express from 'express';
+import express, { Application } from 'express';
 
-let cachedApp: express.Application | null = null;
+let cachedApp: Application | null = null;
 
-async function createApp(): Promise<express.Application> {
+async function createApp(): Promise<Application> {
   if (cachedApp) {
     return cachedApp;
   }
